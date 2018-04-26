@@ -10,7 +10,7 @@ options :: Options
 
 ``` purescript
 newtype ActivityDoesNotExist
-  = ActivityDoesNotExist { message :: NullOrUndefined (ErrorMessage) }
+  = ActivityDoesNotExist { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The specified activity does not exist.</p>
@@ -35,7 +35,7 @@ Constructs ActivityDoesNotExist from required parameters
 #### `newActivityDoesNotExist'`
 
 ``` purescript
-newActivityDoesNotExist' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> ActivityDoesNotExist
+newActivityDoesNotExist' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> ActivityDoesNotExist
 ```
 
 Constructs ActivityDoesNotExist's fields from required parameters
@@ -44,7 +44,7 @@ Constructs ActivityDoesNotExist's fields from required parameters
 
 ``` purescript
 newtype ActivityFailedEventDetails
-  = ActivityFailedEventDetails { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }
+  = ActivityFailedEventDetails { error :: Maybe (Error), cause :: Maybe (Cause) }
 ```
 
 <p>Contains details about an activity which failed during an execution.</p>
@@ -69,7 +69,7 @@ Constructs ActivityFailedEventDetails from required parameters
 #### `newActivityFailedEventDetails'`
 
 ``` purescript
-newActivityFailedEventDetails' :: ({ error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) } -> { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }) -> ActivityFailedEventDetails
+newActivityFailedEventDetails' :: ({ error :: Maybe (Error), cause :: Maybe (Cause) } -> { error :: Maybe (Error), cause :: Maybe (Cause) }) -> ActivityFailedEventDetails
 ```
 
 Constructs ActivityFailedEventDetails's fields from required parameters
@@ -78,7 +78,7 @@ Constructs ActivityFailedEventDetails's fields from required parameters
 
 ``` purescript
 newtype ActivityLimitExceeded
-  = ActivityLimitExceeded { message :: NullOrUndefined (ErrorMessage) }
+  = ActivityLimitExceeded { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The maximum number of activities has been reached. Existing activities must be deleted before a new activity can be created.</p>
@@ -103,7 +103,7 @@ Constructs ActivityLimitExceeded from required parameters
 #### `newActivityLimitExceeded'`
 
 ``` purescript
-newActivityLimitExceeded' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> ActivityLimitExceeded
+newActivityLimitExceeded' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> ActivityLimitExceeded
 ```
 
 Constructs ActivityLimitExceeded's fields from required parameters
@@ -162,7 +162,7 @@ Constructs ActivityListItem's fields from required parameters
 
 ``` purescript
 newtype ActivityScheduleFailedEventDetails
-  = ActivityScheduleFailedEventDetails { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }
+  = ActivityScheduleFailedEventDetails { error :: Maybe (Error), cause :: Maybe (Cause) }
 ```
 
 <p>Contains details about an activity schedule failure which occurred during an execution.</p>
@@ -187,7 +187,7 @@ Constructs ActivityScheduleFailedEventDetails from required parameters
 #### `newActivityScheduleFailedEventDetails'`
 
 ``` purescript
-newActivityScheduleFailedEventDetails' :: ({ error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) } -> { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }) -> ActivityScheduleFailedEventDetails
+newActivityScheduleFailedEventDetails' :: ({ error :: Maybe (Error), cause :: Maybe (Cause) } -> { error :: Maybe (Error), cause :: Maybe (Cause) }) -> ActivityScheduleFailedEventDetails
 ```
 
 Constructs ActivityScheduleFailedEventDetails's fields from required parameters
@@ -196,7 +196,7 @@ Constructs ActivityScheduleFailedEventDetails's fields from required parameters
 
 ``` purescript
 newtype ActivityScheduledEventDetails
-  = ActivityScheduledEventDetails { resource :: Arn, input :: NullOrUndefined (Data), timeoutInSeconds :: NullOrUndefined (TimeoutInSeconds), heartbeatInSeconds :: NullOrUndefined (TimeoutInSeconds) }
+  = ActivityScheduledEventDetails { resource :: Arn, input :: Maybe (Data), timeoutInSeconds :: Maybe (TimeoutInSeconds), heartbeatInSeconds :: Maybe (TimeoutInSeconds) }
 ```
 
 <p>Contains details about an activity scheduled during an execution.</p>
@@ -221,7 +221,7 @@ Constructs ActivityScheduledEventDetails from required parameters
 #### `newActivityScheduledEventDetails'`
 
 ``` purescript
-newActivityScheduledEventDetails' :: Arn -> ({ resource :: Arn, input :: NullOrUndefined (Data), timeoutInSeconds :: NullOrUndefined (TimeoutInSeconds), heartbeatInSeconds :: NullOrUndefined (TimeoutInSeconds) } -> { resource :: Arn, input :: NullOrUndefined (Data), timeoutInSeconds :: NullOrUndefined (TimeoutInSeconds), heartbeatInSeconds :: NullOrUndefined (TimeoutInSeconds) }) -> ActivityScheduledEventDetails
+newActivityScheduledEventDetails' :: Arn -> ({ resource :: Arn, input :: Maybe (Data), timeoutInSeconds :: Maybe (TimeoutInSeconds), heartbeatInSeconds :: Maybe (TimeoutInSeconds) } -> { resource :: Arn, input :: Maybe (Data), timeoutInSeconds :: Maybe (TimeoutInSeconds), heartbeatInSeconds :: Maybe (TimeoutInSeconds) }) -> ActivityScheduledEventDetails
 ```
 
 Constructs ActivityScheduledEventDetails's fields from required parameters
@@ -230,7 +230,7 @@ Constructs ActivityScheduledEventDetails's fields from required parameters
 
 ``` purescript
 newtype ActivityStartedEventDetails
-  = ActivityStartedEventDetails { workerName :: NullOrUndefined (Identity) }
+  = ActivityStartedEventDetails { workerName :: Maybe (Identity) }
 ```
 
 <p>Contains details about the start of an activity during an execution.</p>
@@ -255,7 +255,7 @@ Constructs ActivityStartedEventDetails from required parameters
 #### `newActivityStartedEventDetails'`
 
 ``` purescript
-newActivityStartedEventDetails' :: ({ workerName :: NullOrUndefined (Identity) } -> { workerName :: NullOrUndefined (Identity) }) -> ActivityStartedEventDetails
+newActivityStartedEventDetails' :: ({ workerName :: Maybe (Identity) } -> { workerName :: Maybe (Identity) }) -> ActivityStartedEventDetails
 ```
 
 Constructs ActivityStartedEventDetails's fields from required parameters
@@ -264,7 +264,7 @@ Constructs ActivityStartedEventDetails's fields from required parameters
 
 ``` purescript
 newtype ActivitySucceededEventDetails
-  = ActivitySucceededEventDetails { output :: NullOrUndefined (Data) }
+  = ActivitySucceededEventDetails { output :: Maybe (Data) }
 ```
 
 <p>Contains details about an activity which successfully terminated during an execution.</p>
@@ -289,7 +289,7 @@ Constructs ActivitySucceededEventDetails from required parameters
 #### `newActivitySucceededEventDetails'`
 
 ``` purescript
-newActivitySucceededEventDetails' :: ({ output :: NullOrUndefined (Data) } -> { output :: NullOrUndefined (Data) }) -> ActivitySucceededEventDetails
+newActivitySucceededEventDetails' :: ({ output :: Maybe (Data) } -> { output :: Maybe (Data) }) -> ActivitySucceededEventDetails
 ```
 
 Constructs ActivitySucceededEventDetails's fields from required parameters
@@ -298,7 +298,7 @@ Constructs ActivitySucceededEventDetails's fields from required parameters
 
 ``` purescript
 newtype ActivityTimedOutEventDetails
-  = ActivityTimedOutEventDetails { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }
+  = ActivityTimedOutEventDetails { error :: Maybe (Error), cause :: Maybe (Cause) }
 ```
 
 <p>Contains details about an activity timeout which occurred during an execution.</p>
@@ -323,7 +323,7 @@ Constructs ActivityTimedOutEventDetails from required parameters
 #### `newActivityTimedOutEventDetails'`
 
 ``` purescript
-newActivityTimedOutEventDetails' :: ({ error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) } -> { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }) -> ActivityTimedOutEventDetails
+newActivityTimedOutEventDetails' :: ({ error :: Maybe (Error), cause :: Maybe (Cause) } -> { error :: Maybe (Error), cause :: Maybe (Cause) }) -> ActivityTimedOutEventDetails
 ```
 
 Constructs ActivityTimedOutEventDetails's fields from required parameters
@@ -332,7 +332,7 @@ Constructs ActivityTimedOutEventDetails's fields from required parameters
 
 ``` purescript
 newtype ActivityWorkerLimitExceeded
-  = ActivityWorkerLimitExceeded { message :: NullOrUndefined (ErrorMessage) }
+  = ActivityWorkerLimitExceeded { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The maximum number of workers concurrently polling for activity tasks has been reached.</p>
@@ -357,7 +357,7 @@ Constructs ActivityWorkerLimitExceeded from required parameters
 #### `newActivityWorkerLimitExceeded'`
 
 ``` purescript
-newActivityWorkerLimitExceeded' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> ActivityWorkerLimitExceeded
+newActivityWorkerLimitExceeded' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> ActivityWorkerLimitExceeded
 ```
 
 Constructs ActivityWorkerLimitExceeded's fields from required parameters
@@ -750,7 +750,7 @@ Constructs DescribeExecutionInput's fields from required parameters
 
 ``` purescript
 newtype DescribeExecutionOutput
-  = DescribeExecutionOutput { executionArn :: Arn, stateMachineArn :: Arn, name :: NullOrUndefined (Name), status :: ExecutionStatus, startDate :: Timestamp, stopDate :: NullOrUndefined (Timestamp), input :: Data, output :: NullOrUndefined (Data) }
+  = DescribeExecutionOutput { executionArn :: Arn, stateMachineArn :: Arn, name :: Maybe (Name), status :: ExecutionStatus, startDate :: Timestamp, stopDate :: Maybe (Timestamp), input :: Data, output :: Maybe (Data) }
 ```
 
 ##### Instances
@@ -773,7 +773,7 @@ Constructs DescribeExecutionOutput from required parameters
 #### `newDescribeExecutionOutput'`
 
 ``` purescript
-newDescribeExecutionOutput' :: Arn -> Data -> Timestamp -> Arn -> ExecutionStatus -> ({ executionArn :: Arn, stateMachineArn :: Arn, name :: NullOrUndefined (Name), status :: ExecutionStatus, startDate :: Timestamp, stopDate :: NullOrUndefined (Timestamp), input :: Data, output :: NullOrUndefined (Data) } -> { executionArn :: Arn, stateMachineArn :: Arn, name :: NullOrUndefined (Name), status :: ExecutionStatus, startDate :: Timestamp, stopDate :: NullOrUndefined (Timestamp), input :: Data, output :: NullOrUndefined (Data) }) -> DescribeExecutionOutput
+newDescribeExecutionOutput' :: Arn -> Data -> Timestamp -> Arn -> ExecutionStatus -> ({ executionArn :: Arn, stateMachineArn :: Arn, name :: Maybe (Name), status :: ExecutionStatus, startDate :: Timestamp, stopDate :: Maybe (Timestamp), input :: Data, output :: Maybe (Data) } -> { executionArn :: Arn, stateMachineArn :: Arn, name :: Maybe (Name), status :: ExecutionStatus, startDate :: Timestamp, stopDate :: Maybe (Timestamp), input :: Data, output :: Maybe (Data) }) -> DescribeExecutionOutput
 ```
 
 Constructs DescribeExecutionOutput's fields from required parameters
@@ -878,7 +878,7 @@ Constructs DescribeStateMachineInput's fields from required parameters
 
 ``` purescript
 newtype DescribeStateMachineOutput
-  = DescribeStateMachineOutput { stateMachineArn :: Arn, name :: Name, status :: NullOrUndefined (StateMachineStatus), definition :: Definition, roleArn :: Arn, creationDate :: Timestamp }
+  = DescribeStateMachineOutput { stateMachineArn :: Arn, name :: Name, status :: Maybe (StateMachineStatus), definition :: Definition, roleArn :: Arn, creationDate :: Timestamp }
 ```
 
 ##### Instances
@@ -901,7 +901,7 @@ Constructs DescribeStateMachineOutput from required parameters
 #### `newDescribeStateMachineOutput'`
 
 ``` purescript
-newDescribeStateMachineOutput' :: Timestamp -> Definition -> Name -> Arn -> Arn -> ({ stateMachineArn :: Arn, name :: Name, status :: NullOrUndefined (StateMachineStatus), definition :: Definition, roleArn :: Arn, creationDate :: Timestamp } -> { stateMachineArn :: Arn, name :: Name, status :: NullOrUndefined (StateMachineStatus), definition :: Definition, roleArn :: Arn, creationDate :: Timestamp }) -> DescribeStateMachineOutput
+newDescribeStateMachineOutput' :: Timestamp -> Definition -> Name -> Arn -> Arn -> ({ stateMachineArn :: Arn, name :: Name, status :: Maybe (StateMachineStatus), definition :: Definition, roleArn :: Arn, creationDate :: Timestamp } -> { stateMachineArn :: Arn, name :: Name, status :: Maybe (StateMachineStatus), definition :: Definition, roleArn :: Arn, creationDate :: Timestamp }) -> DescribeStateMachineOutput
 ```
 
 Constructs DescribeStateMachineOutput's fields from required parameters
@@ -958,7 +958,7 @@ Encode EventId
 
 ``` purescript
 newtype ExecutionAbortedEventDetails
-  = ExecutionAbortedEventDetails { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }
+  = ExecutionAbortedEventDetails { error :: Maybe (Error), cause :: Maybe (Cause) }
 ```
 
 <p>Contains details about an abort of an execution.</p>
@@ -983,7 +983,7 @@ Constructs ExecutionAbortedEventDetails from required parameters
 #### `newExecutionAbortedEventDetails'`
 
 ``` purescript
-newExecutionAbortedEventDetails' :: ({ error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) } -> { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }) -> ExecutionAbortedEventDetails
+newExecutionAbortedEventDetails' :: ({ error :: Maybe (Error), cause :: Maybe (Cause) } -> { error :: Maybe (Error), cause :: Maybe (Cause) }) -> ExecutionAbortedEventDetails
 ```
 
 Constructs ExecutionAbortedEventDetails's fields from required parameters
@@ -992,7 +992,7 @@ Constructs ExecutionAbortedEventDetails's fields from required parameters
 
 ``` purescript
 newtype ExecutionAlreadyExists
-  = ExecutionAlreadyExists { message :: NullOrUndefined (ErrorMessage) }
+  = ExecutionAlreadyExists { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The execution has the same <code>name</code> as another execution (but a different <code>input</code>).</p> <note> <p>Executions with the same <code>name</code> and <code>input</code> are considered idempotent.</p> </note>
@@ -1017,7 +1017,7 @@ Constructs ExecutionAlreadyExists from required parameters
 #### `newExecutionAlreadyExists'`
 
 ``` purescript
-newExecutionAlreadyExists' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> ExecutionAlreadyExists
+newExecutionAlreadyExists' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> ExecutionAlreadyExists
 ```
 
 Constructs ExecutionAlreadyExists's fields from required parameters
@@ -1026,7 +1026,7 @@ Constructs ExecutionAlreadyExists's fields from required parameters
 
 ``` purescript
 newtype ExecutionDoesNotExist
-  = ExecutionDoesNotExist { message :: NullOrUndefined (ErrorMessage) }
+  = ExecutionDoesNotExist { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The specified execution does not exist.</p>
@@ -1051,7 +1051,7 @@ Constructs ExecutionDoesNotExist from required parameters
 #### `newExecutionDoesNotExist'`
 
 ``` purescript
-newExecutionDoesNotExist' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> ExecutionDoesNotExist
+newExecutionDoesNotExist' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> ExecutionDoesNotExist
 ```
 
 Constructs ExecutionDoesNotExist's fields from required parameters
@@ -1060,7 +1060,7 @@ Constructs ExecutionDoesNotExist's fields from required parameters
 
 ``` purescript
 newtype ExecutionFailedEventDetails
-  = ExecutionFailedEventDetails { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }
+  = ExecutionFailedEventDetails { error :: Maybe (Error), cause :: Maybe (Cause) }
 ```
 
 <p>Contains details about an execution failure event.</p>
@@ -1085,7 +1085,7 @@ Constructs ExecutionFailedEventDetails from required parameters
 #### `newExecutionFailedEventDetails'`
 
 ``` purescript
-newExecutionFailedEventDetails' :: ({ error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) } -> { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }) -> ExecutionFailedEventDetails
+newExecutionFailedEventDetails' :: ({ error :: Maybe (Error), cause :: Maybe (Cause) } -> { error :: Maybe (Error), cause :: Maybe (Cause) }) -> ExecutionFailedEventDetails
 ```
 
 Constructs ExecutionFailedEventDetails's fields from required parameters
@@ -1094,7 +1094,7 @@ Constructs ExecutionFailedEventDetails's fields from required parameters
 
 ``` purescript
 newtype ExecutionLimitExceeded
-  = ExecutionLimitExceeded { message :: NullOrUndefined (ErrorMessage) }
+  = ExecutionLimitExceeded { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The maximum number of running executions has been reached. Running executions must end or be stopped before a new execution can be started.</p>
@@ -1119,7 +1119,7 @@ Constructs ExecutionLimitExceeded from required parameters
 #### `newExecutionLimitExceeded'`
 
 ``` purescript
-newExecutionLimitExceeded' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> ExecutionLimitExceeded
+newExecutionLimitExceeded' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> ExecutionLimitExceeded
 ```
 
 Constructs ExecutionLimitExceeded's fields from required parameters
@@ -1144,7 +1144,7 @@ Encode ExecutionList
 
 ``` purescript
 newtype ExecutionListItem
-  = ExecutionListItem { executionArn :: Arn, stateMachineArn :: Arn, name :: Name, status :: ExecutionStatus, startDate :: Timestamp, stopDate :: NullOrUndefined (Timestamp) }
+  = ExecutionListItem { executionArn :: Arn, stateMachineArn :: Arn, name :: Name, status :: ExecutionStatus, startDate :: Timestamp, stopDate :: Maybe (Timestamp) }
 ```
 
 <p>Contains details about an execution.</p>
@@ -1169,7 +1169,7 @@ Constructs ExecutionListItem from required parameters
 #### `newExecutionListItem'`
 
 ``` purescript
-newExecutionListItem' :: Arn -> Name -> Timestamp -> Arn -> ExecutionStatus -> ({ executionArn :: Arn, stateMachineArn :: Arn, name :: Name, status :: ExecutionStatus, startDate :: Timestamp, stopDate :: NullOrUndefined (Timestamp) } -> { executionArn :: Arn, stateMachineArn :: Arn, name :: Name, status :: ExecutionStatus, startDate :: Timestamp, stopDate :: NullOrUndefined (Timestamp) }) -> ExecutionListItem
+newExecutionListItem' :: Arn -> Name -> Timestamp -> Arn -> ExecutionStatus -> ({ executionArn :: Arn, stateMachineArn :: Arn, name :: Name, status :: ExecutionStatus, startDate :: Timestamp, stopDate :: Maybe (Timestamp) } -> { executionArn :: Arn, stateMachineArn :: Arn, name :: Name, status :: ExecutionStatus, startDate :: Timestamp, stopDate :: Maybe (Timestamp) }) -> ExecutionListItem
 ```
 
 Constructs ExecutionListItem's fields from required parameters
@@ -1178,7 +1178,7 @@ Constructs ExecutionListItem's fields from required parameters
 
 ``` purescript
 newtype ExecutionStartedEventDetails
-  = ExecutionStartedEventDetails { input :: NullOrUndefined (Data), roleArn :: NullOrUndefined (Arn) }
+  = ExecutionStartedEventDetails { input :: Maybe (Data), roleArn :: Maybe (Arn) }
 ```
 
 <p>Contains details about the start of the execution.</p>
@@ -1203,7 +1203,7 @@ Constructs ExecutionStartedEventDetails from required parameters
 #### `newExecutionStartedEventDetails'`
 
 ``` purescript
-newExecutionStartedEventDetails' :: ({ input :: NullOrUndefined (Data), roleArn :: NullOrUndefined (Arn) } -> { input :: NullOrUndefined (Data), roleArn :: NullOrUndefined (Arn) }) -> ExecutionStartedEventDetails
+newExecutionStartedEventDetails' :: ({ input :: Maybe (Data), roleArn :: Maybe (Arn) } -> { input :: Maybe (Data), roleArn :: Maybe (Arn) }) -> ExecutionStartedEventDetails
 ```
 
 Constructs ExecutionStartedEventDetails's fields from required parameters
@@ -1228,7 +1228,7 @@ Encode ExecutionStatus
 
 ``` purescript
 newtype ExecutionSucceededEventDetails
-  = ExecutionSucceededEventDetails { output :: NullOrUndefined (Data) }
+  = ExecutionSucceededEventDetails { output :: Maybe (Data) }
 ```
 
 <p>Contains details about the successful termination of the execution.</p>
@@ -1253,7 +1253,7 @@ Constructs ExecutionSucceededEventDetails from required parameters
 #### `newExecutionSucceededEventDetails'`
 
 ``` purescript
-newExecutionSucceededEventDetails' :: ({ output :: NullOrUndefined (Data) } -> { output :: NullOrUndefined (Data) }) -> ExecutionSucceededEventDetails
+newExecutionSucceededEventDetails' :: ({ output :: Maybe (Data) } -> { output :: Maybe (Data) }) -> ExecutionSucceededEventDetails
 ```
 
 Constructs ExecutionSucceededEventDetails's fields from required parameters
@@ -1262,7 +1262,7 @@ Constructs ExecutionSucceededEventDetails's fields from required parameters
 
 ``` purescript
 newtype ExecutionTimedOutEventDetails
-  = ExecutionTimedOutEventDetails { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }
+  = ExecutionTimedOutEventDetails { error :: Maybe (Error), cause :: Maybe (Cause) }
 ```
 
 <p>Contains details about the execution timeout which occurred during the execution.</p>
@@ -1287,7 +1287,7 @@ Constructs ExecutionTimedOutEventDetails from required parameters
 #### `newExecutionTimedOutEventDetails'`
 
 ``` purescript
-newExecutionTimedOutEventDetails' :: ({ error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) } -> { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }) -> ExecutionTimedOutEventDetails
+newExecutionTimedOutEventDetails' :: ({ error :: Maybe (Error), cause :: Maybe (Cause) } -> { error :: Maybe (Error), cause :: Maybe (Cause) }) -> ExecutionTimedOutEventDetails
 ```
 
 Constructs ExecutionTimedOutEventDetails's fields from required parameters
@@ -1296,7 +1296,7 @@ Constructs ExecutionTimedOutEventDetails's fields from required parameters
 
 ``` purescript
 newtype GetActivityTaskInput
-  = GetActivityTaskInput { activityArn :: Arn, workerName :: NullOrUndefined (Name) }
+  = GetActivityTaskInput { activityArn :: Arn, workerName :: Maybe (Name) }
 ```
 
 ##### Instances
@@ -1319,7 +1319,7 @@ Constructs GetActivityTaskInput from required parameters
 #### `newGetActivityTaskInput'`
 
 ``` purescript
-newGetActivityTaskInput' :: Arn -> ({ activityArn :: Arn, workerName :: NullOrUndefined (Name) } -> { activityArn :: Arn, workerName :: NullOrUndefined (Name) }) -> GetActivityTaskInput
+newGetActivityTaskInput' :: Arn -> ({ activityArn :: Arn, workerName :: Maybe (Name) } -> { activityArn :: Arn, workerName :: Maybe (Name) }) -> GetActivityTaskInput
 ```
 
 Constructs GetActivityTaskInput's fields from required parameters
@@ -1328,7 +1328,7 @@ Constructs GetActivityTaskInput's fields from required parameters
 
 ``` purescript
 newtype GetActivityTaskOutput
-  = GetActivityTaskOutput { taskToken :: NullOrUndefined (TaskToken), input :: NullOrUndefined (Data) }
+  = GetActivityTaskOutput { taskToken :: Maybe (TaskToken), input :: Maybe (Data) }
 ```
 
 ##### Instances
@@ -1351,7 +1351,7 @@ Constructs GetActivityTaskOutput from required parameters
 #### `newGetActivityTaskOutput'`
 
 ``` purescript
-newGetActivityTaskOutput' :: ({ taskToken :: NullOrUndefined (TaskToken), input :: NullOrUndefined (Data) } -> { taskToken :: NullOrUndefined (TaskToken), input :: NullOrUndefined (Data) }) -> GetActivityTaskOutput
+newGetActivityTaskOutput' :: ({ taskToken :: Maybe (TaskToken), input :: Maybe (Data) } -> { taskToken :: Maybe (TaskToken), input :: Maybe (Data) }) -> GetActivityTaskOutput
 ```
 
 Constructs GetActivityTaskOutput's fields from required parameters
@@ -1360,7 +1360,7 @@ Constructs GetActivityTaskOutput's fields from required parameters
 
 ``` purescript
 newtype GetExecutionHistoryInput
-  = GetExecutionHistoryInput { executionArn :: Arn, maxResults :: NullOrUndefined (PageSize), reverseOrder :: NullOrUndefined (ReverseOrder), nextToken :: NullOrUndefined (PageToken) }
+  = GetExecutionHistoryInput { executionArn :: Arn, maxResults :: Maybe (PageSize), reverseOrder :: Maybe (ReverseOrder), nextToken :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -1383,7 +1383,7 @@ Constructs GetExecutionHistoryInput from required parameters
 #### `newGetExecutionHistoryInput'`
 
 ``` purescript
-newGetExecutionHistoryInput' :: Arn -> ({ executionArn :: Arn, maxResults :: NullOrUndefined (PageSize), reverseOrder :: NullOrUndefined (ReverseOrder), nextToken :: NullOrUndefined (PageToken) } -> { executionArn :: Arn, maxResults :: NullOrUndefined (PageSize), reverseOrder :: NullOrUndefined (ReverseOrder), nextToken :: NullOrUndefined (PageToken) }) -> GetExecutionHistoryInput
+newGetExecutionHistoryInput' :: Arn -> ({ executionArn :: Arn, maxResults :: Maybe (PageSize), reverseOrder :: Maybe (ReverseOrder), nextToken :: Maybe (PageToken) } -> { executionArn :: Arn, maxResults :: Maybe (PageSize), reverseOrder :: Maybe (ReverseOrder), nextToken :: Maybe (PageToken) }) -> GetExecutionHistoryInput
 ```
 
 Constructs GetExecutionHistoryInput's fields from required parameters
@@ -1392,7 +1392,7 @@ Constructs GetExecutionHistoryInput's fields from required parameters
 
 ``` purescript
 newtype GetExecutionHistoryOutput
-  = GetExecutionHistoryOutput { events :: HistoryEventList, nextToken :: NullOrUndefined (PageToken) }
+  = GetExecutionHistoryOutput { events :: HistoryEventList, nextToken :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -1415,7 +1415,7 @@ Constructs GetExecutionHistoryOutput from required parameters
 #### `newGetExecutionHistoryOutput'`
 
 ``` purescript
-newGetExecutionHistoryOutput' :: HistoryEventList -> ({ events :: HistoryEventList, nextToken :: NullOrUndefined (PageToken) } -> { events :: HistoryEventList, nextToken :: NullOrUndefined (PageToken) }) -> GetExecutionHistoryOutput
+newGetExecutionHistoryOutput' :: HistoryEventList -> ({ events :: HistoryEventList, nextToken :: Maybe (PageToken) } -> { events :: HistoryEventList, nextToken :: Maybe (PageToken) }) -> GetExecutionHistoryOutput
 ```
 
 Constructs GetExecutionHistoryOutput's fields from required parameters
@@ -1424,7 +1424,7 @@ Constructs GetExecutionHistoryOutput's fields from required parameters
 
 ``` purescript
 newtype HistoryEvent
-  = HistoryEvent { timestamp :: Timestamp, "type" :: HistoryEventType, id :: EventId, previousEventId :: NullOrUndefined (EventId), activityFailedEventDetails :: NullOrUndefined (ActivityFailedEventDetails), activityScheduleFailedEventDetails :: NullOrUndefined (ActivityScheduleFailedEventDetails), activityScheduledEventDetails :: NullOrUndefined (ActivityScheduledEventDetails), activityStartedEventDetails :: NullOrUndefined (ActivityStartedEventDetails), activitySucceededEventDetails :: NullOrUndefined (ActivitySucceededEventDetails), activityTimedOutEventDetails :: NullOrUndefined (ActivityTimedOutEventDetails), executionFailedEventDetails :: NullOrUndefined (ExecutionFailedEventDetails), executionStartedEventDetails :: NullOrUndefined (ExecutionStartedEventDetails), executionSucceededEventDetails :: NullOrUndefined (ExecutionSucceededEventDetails), executionAbortedEventDetails :: NullOrUndefined (ExecutionAbortedEventDetails), executionTimedOutEventDetails :: NullOrUndefined (ExecutionTimedOutEventDetails), lambdaFunctionFailedEventDetails :: NullOrUndefined (LambdaFunctionFailedEventDetails), lambdaFunctionScheduleFailedEventDetails :: NullOrUndefined (LambdaFunctionScheduleFailedEventDetails), lambdaFunctionScheduledEventDetails :: NullOrUndefined (LambdaFunctionScheduledEventDetails), lambdaFunctionStartFailedEventDetails :: NullOrUndefined (LambdaFunctionStartFailedEventDetails), lambdaFunctionSucceededEventDetails :: NullOrUndefined (LambdaFunctionSucceededEventDetails), lambdaFunctionTimedOutEventDetails :: NullOrUndefined (LambdaFunctionTimedOutEventDetails), stateEnteredEventDetails :: NullOrUndefined (StateEnteredEventDetails), stateExitedEventDetails :: NullOrUndefined (StateExitedEventDetails) }
+  = HistoryEvent { timestamp :: Timestamp, "type" :: HistoryEventType, id :: EventId, previousEventId :: Maybe (EventId), activityFailedEventDetails :: Maybe (ActivityFailedEventDetails), activityScheduleFailedEventDetails :: Maybe (ActivityScheduleFailedEventDetails), activityScheduledEventDetails :: Maybe (ActivityScheduledEventDetails), activityStartedEventDetails :: Maybe (ActivityStartedEventDetails), activitySucceededEventDetails :: Maybe (ActivitySucceededEventDetails), activityTimedOutEventDetails :: Maybe (ActivityTimedOutEventDetails), executionFailedEventDetails :: Maybe (ExecutionFailedEventDetails), executionStartedEventDetails :: Maybe (ExecutionStartedEventDetails), executionSucceededEventDetails :: Maybe (ExecutionSucceededEventDetails), executionAbortedEventDetails :: Maybe (ExecutionAbortedEventDetails), executionTimedOutEventDetails :: Maybe (ExecutionTimedOutEventDetails), lambdaFunctionFailedEventDetails :: Maybe (LambdaFunctionFailedEventDetails), lambdaFunctionScheduleFailedEventDetails :: Maybe (LambdaFunctionScheduleFailedEventDetails), lambdaFunctionScheduledEventDetails :: Maybe (LambdaFunctionScheduledEventDetails), lambdaFunctionStartFailedEventDetails :: Maybe (LambdaFunctionStartFailedEventDetails), lambdaFunctionSucceededEventDetails :: Maybe (LambdaFunctionSucceededEventDetails), lambdaFunctionTimedOutEventDetails :: Maybe (LambdaFunctionTimedOutEventDetails), stateEnteredEventDetails :: Maybe (StateEnteredEventDetails), stateExitedEventDetails :: Maybe (StateExitedEventDetails) }
 ```
 
 <p>Contains details about the events of an execution.</p>
@@ -1449,7 +1449,7 @@ Constructs HistoryEvent from required parameters
 #### `newHistoryEvent'`
 
 ``` purescript
-newHistoryEvent' :: EventId -> Timestamp -> HistoryEventType -> ({ timestamp :: Timestamp, "type" :: HistoryEventType, id :: EventId, previousEventId :: NullOrUndefined (EventId), activityFailedEventDetails :: NullOrUndefined (ActivityFailedEventDetails), activityScheduleFailedEventDetails :: NullOrUndefined (ActivityScheduleFailedEventDetails), activityScheduledEventDetails :: NullOrUndefined (ActivityScheduledEventDetails), activityStartedEventDetails :: NullOrUndefined (ActivityStartedEventDetails), activitySucceededEventDetails :: NullOrUndefined (ActivitySucceededEventDetails), activityTimedOutEventDetails :: NullOrUndefined (ActivityTimedOutEventDetails), executionFailedEventDetails :: NullOrUndefined (ExecutionFailedEventDetails), executionStartedEventDetails :: NullOrUndefined (ExecutionStartedEventDetails), executionSucceededEventDetails :: NullOrUndefined (ExecutionSucceededEventDetails), executionAbortedEventDetails :: NullOrUndefined (ExecutionAbortedEventDetails), executionTimedOutEventDetails :: NullOrUndefined (ExecutionTimedOutEventDetails), lambdaFunctionFailedEventDetails :: NullOrUndefined (LambdaFunctionFailedEventDetails), lambdaFunctionScheduleFailedEventDetails :: NullOrUndefined (LambdaFunctionScheduleFailedEventDetails), lambdaFunctionScheduledEventDetails :: NullOrUndefined (LambdaFunctionScheduledEventDetails), lambdaFunctionStartFailedEventDetails :: NullOrUndefined (LambdaFunctionStartFailedEventDetails), lambdaFunctionSucceededEventDetails :: NullOrUndefined (LambdaFunctionSucceededEventDetails), lambdaFunctionTimedOutEventDetails :: NullOrUndefined (LambdaFunctionTimedOutEventDetails), stateEnteredEventDetails :: NullOrUndefined (StateEnteredEventDetails), stateExitedEventDetails :: NullOrUndefined (StateExitedEventDetails) } -> { timestamp :: Timestamp, "type" :: HistoryEventType, id :: EventId, previousEventId :: NullOrUndefined (EventId), activityFailedEventDetails :: NullOrUndefined (ActivityFailedEventDetails), activityScheduleFailedEventDetails :: NullOrUndefined (ActivityScheduleFailedEventDetails), activityScheduledEventDetails :: NullOrUndefined (ActivityScheduledEventDetails), activityStartedEventDetails :: NullOrUndefined (ActivityStartedEventDetails), activitySucceededEventDetails :: NullOrUndefined (ActivitySucceededEventDetails), activityTimedOutEventDetails :: NullOrUndefined (ActivityTimedOutEventDetails), executionFailedEventDetails :: NullOrUndefined (ExecutionFailedEventDetails), executionStartedEventDetails :: NullOrUndefined (ExecutionStartedEventDetails), executionSucceededEventDetails :: NullOrUndefined (ExecutionSucceededEventDetails), executionAbortedEventDetails :: NullOrUndefined (ExecutionAbortedEventDetails), executionTimedOutEventDetails :: NullOrUndefined (ExecutionTimedOutEventDetails), lambdaFunctionFailedEventDetails :: NullOrUndefined (LambdaFunctionFailedEventDetails), lambdaFunctionScheduleFailedEventDetails :: NullOrUndefined (LambdaFunctionScheduleFailedEventDetails), lambdaFunctionScheduledEventDetails :: NullOrUndefined (LambdaFunctionScheduledEventDetails), lambdaFunctionStartFailedEventDetails :: NullOrUndefined (LambdaFunctionStartFailedEventDetails), lambdaFunctionSucceededEventDetails :: NullOrUndefined (LambdaFunctionSucceededEventDetails), lambdaFunctionTimedOutEventDetails :: NullOrUndefined (LambdaFunctionTimedOutEventDetails), stateEnteredEventDetails :: NullOrUndefined (StateEnteredEventDetails), stateExitedEventDetails :: NullOrUndefined (StateExitedEventDetails) }) -> HistoryEvent
+newHistoryEvent' :: EventId -> Timestamp -> HistoryEventType -> ({ timestamp :: Timestamp, "type" :: HistoryEventType, id :: EventId, previousEventId :: Maybe (EventId), activityFailedEventDetails :: Maybe (ActivityFailedEventDetails), activityScheduleFailedEventDetails :: Maybe (ActivityScheduleFailedEventDetails), activityScheduledEventDetails :: Maybe (ActivityScheduledEventDetails), activityStartedEventDetails :: Maybe (ActivityStartedEventDetails), activitySucceededEventDetails :: Maybe (ActivitySucceededEventDetails), activityTimedOutEventDetails :: Maybe (ActivityTimedOutEventDetails), executionFailedEventDetails :: Maybe (ExecutionFailedEventDetails), executionStartedEventDetails :: Maybe (ExecutionStartedEventDetails), executionSucceededEventDetails :: Maybe (ExecutionSucceededEventDetails), executionAbortedEventDetails :: Maybe (ExecutionAbortedEventDetails), executionTimedOutEventDetails :: Maybe (ExecutionTimedOutEventDetails), lambdaFunctionFailedEventDetails :: Maybe (LambdaFunctionFailedEventDetails), lambdaFunctionScheduleFailedEventDetails :: Maybe (LambdaFunctionScheduleFailedEventDetails), lambdaFunctionScheduledEventDetails :: Maybe (LambdaFunctionScheduledEventDetails), lambdaFunctionStartFailedEventDetails :: Maybe (LambdaFunctionStartFailedEventDetails), lambdaFunctionSucceededEventDetails :: Maybe (LambdaFunctionSucceededEventDetails), lambdaFunctionTimedOutEventDetails :: Maybe (LambdaFunctionTimedOutEventDetails), stateEnteredEventDetails :: Maybe (StateEnteredEventDetails), stateExitedEventDetails :: Maybe (StateExitedEventDetails) } -> { timestamp :: Timestamp, "type" :: HistoryEventType, id :: EventId, previousEventId :: Maybe (EventId), activityFailedEventDetails :: Maybe (ActivityFailedEventDetails), activityScheduleFailedEventDetails :: Maybe (ActivityScheduleFailedEventDetails), activityScheduledEventDetails :: Maybe (ActivityScheduledEventDetails), activityStartedEventDetails :: Maybe (ActivityStartedEventDetails), activitySucceededEventDetails :: Maybe (ActivitySucceededEventDetails), activityTimedOutEventDetails :: Maybe (ActivityTimedOutEventDetails), executionFailedEventDetails :: Maybe (ExecutionFailedEventDetails), executionStartedEventDetails :: Maybe (ExecutionStartedEventDetails), executionSucceededEventDetails :: Maybe (ExecutionSucceededEventDetails), executionAbortedEventDetails :: Maybe (ExecutionAbortedEventDetails), executionTimedOutEventDetails :: Maybe (ExecutionTimedOutEventDetails), lambdaFunctionFailedEventDetails :: Maybe (LambdaFunctionFailedEventDetails), lambdaFunctionScheduleFailedEventDetails :: Maybe (LambdaFunctionScheduleFailedEventDetails), lambdaFunctionScheduledEventDetails :: Maybe (LambdaFunctionScheduledEventDetails), lambdaFunctionStartFailedEventDetails :: Maybe (LambdaFunctionStartFailedEventDetails), lambdaFunctionSucceededEventDetails :: Maybe (LambdaFunctionSucceededEventDetails), lambdaFunctionTimedOutEventDetails :: Maybe (LambdaFunctionTimedOutEventDetails), stateEnteredEventDetails :: Maybe (StateEnteredEventDetails), stateExitedEventDetails :: Maybe (StateExitedEventDetails) }) -> HistoryEvent
 ```
 
 Constructs HistoryEvent's fields from required parameters
@@ -1508,7 +1508,7 @@ Encode Identity
 
 ``` purescript
 newtype InvalidArn
-  = InvalidArn { message :: NullOrUndefined (ErrorMessage) }
+  = InvalidArn { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The provided Amazon Resource Name (ARN) is invalid.</p>
@@ -1533,7 +1533,7 @@ Constructs InvalidArn from required parameters
 #### `newInvalidArn'`
 
 ``` purescript
-newInvalidArn' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> InvalidArn
+newInvalidArn' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> InvalidArn
 ```
 
 Constructs InvalidArn's fields from required parameters
@@ -1542,7 +1542,7 @@ Constructs InvalidArn's fields from required parameters
 
 ``` purescript
 newtype InvalidDefinition
-  = InvalidDefinition { message :: NullOrUndefined (ErrorMessage) }
+  = InvalidDefinition { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The provided Amazon States Language definition is invalid.</p>
@@ -1567,7 +1567,7 @@ Constructs InvalidDefinition from required parameters
 #### `newInvalidDefinition'`
 
 ``` purescript
-newInvalidDefinition' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> InvalidDefinition
+newInvalidDefinition' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> InvalidDefinition
 ```
 
 Constructs InvalidDefinition's fields from required parameters
@@ -1576,7 +1576,7 @@ Constructs InvalidDefinition's fields from required parameters
 
 ``` purescript
 newtype InvalidExecutionInput
-  = InvalidExecutionInput { message :: NullOrUndefined (ErrorMessage) }
+  = InvalidExecutionInput { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The provided JSON input data is invalid.</p>
@@ -1601,7 +1601,7 @@ Constructs InvalidExecutionInput from required parameters
 #### `newInvalidExecutionInput'`
 
 ``` purescript
-newInvalidExecutionInput' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> InvalidExecutionInput
+newInvalidExecutionInput' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> InvalidExecutionInput
 ```
 
 Constructs InvalidExecutionInput's fields from required parameters
@@ -1610,7 +1610,7 @@ Constructs InvalidExecutionInput's fields from required parameters
 
 ``` purescript
 newtype InvalidName
-  = InvalidName { message :: NullOrUndefined (ErrorMessage) }
+  = InvalidName { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The provided name is invalid.</p>
@@ -1635,7 +1635,7 @@ Constructs InvalidName from required parameters
 #### `newInvalidName'`
 
 ``` purescript
-newInvalidName' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> InvalidName
+newInvalidName' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> InvalidName
 ```
 
 Constructs InvalidName's fields from required parameters
@@ -1644,7 +1644,7 @@ Constructs InvalidName's fields from required parameters
 
 ``` purescript
 newtype InvalidOutput
-  = InvalidOutput { message :: NullOrUndefined (ErrorMessage) }
+  = InvalidOutput { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The provided JSON output data is invalid.</p>
@@ -1669,7 +1669,7 @@ Constructs InvalidOutput from required parameters
 #### `newInvalidOutput'`
 
 ``` purescript
-newInvalidOutput' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> InvalidOutput
+newInvalidOutput' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> InvalidOutput
 ```
 
 Constructs InvalidOutput's fields from required parameters
@@ -1678,7 +1678,7 @@ Constructs InvalidOutput's fields from required parameters
 
 ``` purescript
 newtype InvalidToken
-  = InvalidToken { message :: NullOrUndefined (ErrorMessage) }
+  = InvalidToken { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The provided token is invalid.</p>
@@ -1703,7 +1703,7 @@ Constructs InvalidToken from required parameters
 #### `newInvalidToken'`
 
 ``` purescript
-newInvalidToken' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> InvalidToken
+newInvalidToken' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> InvalidToken
 ```
 
 Constructs InvalidToken's fields from required parameters
@@ -1712,7 +1712,7 @@ Constructs InvalidToken's fields from required parameters
 
 ``` purescript
 newtype LambdaFunctionFailedEventDetails
-  = LambdaFunctionFailedEventDetails { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }
+  = LambdaFunctionFailedEventDetails { error :: Maybe (Error), cause :: Maybe (Cause) }
 ```
 
 <p>Contains details about a lambda function which failed during an execution.</p>
@@ -1737,7 +1737,7 @@ Constructs LambdaFunctionFailedEventDetails from required parameters
 #### `newLambdaFunctionFailedEventDetails'`
 
 ``` purescript
-newLambdaFunctionFailedEventDetails' :: ({ error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) } -> { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }) -> LambdaFunctionFailedEventDetails
+newLambdaFunctionFailedEventDetails' :: ({ error :: Maybe (Error), cause :: Maybe (Cause) } -> { error :: Maybe (Error), cause :: Maybe (Cause) }) -> LambdaFunctionFailedEventDetails
 ```
 
 Constructs LambdaFunctionFailedEventDetails's fields from required parameters
@@ -1746,7 +1746,7 @@ Constructs LambdaFunctionFailedEventDetails's fields from required parameters
 
 ``` purescript
 newtype LambdaFunctionScheduleFailedEventDetails
-  = LambdaFunctionScheduleFailedEventDetails { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }
+  = LambdaFunctionScheduleFailedEventDetails { error :: Maybe (Error), cause :: Maybe (Cause) }
 ```
 
 <p>Contains details about a failed lambda function schedule event which occurred during an execution.</p>
@@ -1771,7 +1771,7 @@ Constructs LambdaFunctionScheduleFailedEventDetails from required parameters
 #### `newLambdaFunctionScheduleFailedEventDetails'`
 
 ``` purescript
-newLambdaFunctionScheduleFailedEventDetails' :: ({ error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) } -> { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }) -> LambdaFunctionScheduleFailedEventDetails
+newLambdaFunctionScheduleFailedEventDetails' :: ({ error :: Maybe (Error), cause :: Maybe (Cause) } -> { error :: Maybe (Error), cause :: Maybe (Cause) }) -> LambdaFunctionScheduleFailedEventDetails
 ```
 
 Constructs LambdaFunctionScheduleFailedEventDetails's fields from required parameters
@@ -1780,7 +1780,7 @@ Constructs LambdaFunctionScheduleFailedEventDetails's fields from required param
 
 ``` purescript
 newtype LambdaFunctionScheduledEventDetails
-  = LambdaFunctionScheduledEventDetails { resource :: Arn, input :: NullOrUndefined (Data), timeoutInSeconds :: NullOrUndefined (TimeoutInSeconds) }
+  = LambdaFunctionScheduledEventDetails { resource :: Arn, input :: Maybe (Data), timeoutInSeconds :: Maybe (TimeoutInSeconds) }
 ```
 
 <p>Contains details about a lambda function scheduled during an execution.</p>
@@ -1805,7 +1805,7 @@ Constructs LambdaFunctionScheduledEventDetails from required parameters
 #### `newLambdaFunctionScheduledEventDetails'`
 
 ``` purescript
-newLambdaFunctionScheduledEventDetails' :: Arn -> ({ resource :: Arn, input :: NullOrUndefined (Data), timeoutInSeconds :: NullOrUndefined (TimeoutInSeconds) } -> { resource :: Arn, input :: NullOrUndefined (Data), timeoutInSeconds :: NullOrUndefined (TimeoutInSeconds) }) -> LambdaFunctionScheduledEventDetails
+newLambdaFunctionScheduledEventDetails' :: Arn -> ({ resource :: Arn, input :: Maybe (Data), timeoutInSeconds :: Maybe (TimeoutInSeconds) } -> { resource :: Arn, input :: Maybe (Data), timeoutInSeconds :: Maybe (TimeoutInSeconds) }) -> LambdaFunctionScheduledEventDetails
 ```
 
 Constructs LambdaFunctionScheduledEventDetails's fields from required parameters
@@ -1814,7 +1814,7 @@ Constructs LambdaFunctionScheduledEventDetails's fields from required parameters
 
 ``` purescript
 newtype LambdaFunctionStartFailedEventDetails
-  = LambdaFunctionStartFailedEventDetails { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }
+  = LambdaFunctionStartFailedEventDetails { error :: Maybe (Error), cause :: Maybe (Cause) }
 ```
 
 <p>Contains details about a lambda function which failed to start during an execution.</p>
@@ -1839,7 +1839,7 @@ Constructs LambdaFunctionStartFailedEventDetails from required parameters
 #### `newLambdaFunctionStartFailedEventDetails'`
 
 ``` purescript
-newLambdaFunctionStartFailedEventDetails' :: ({ error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) } -> { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }) -> LambdaFunctionStartFailedEventDetails
+newLambdaFunctionStartFailedEventDetails' :: ({ error :: Maybe (Error), cause :: Maybe (Cause) } -> { error :: Maybe (Error), cause :: Maybe (Cause) }) -> LambdaFunctionStartFailedEventDetails
 ```
 
 Constructs LambdaFunctionStartFailedEventDetails's fields from required parameters
@@ -1848,7 +1848,7 @@ Constructs LambdaFunctionStartFailedEventDetails's fields from required paramete
 
 ``` purescript
 newtype LambdaFunctionSucceededEventDetails
-  = LambdaFunctionSucceededEventDetails { output :: NullOrUndefined (Data) }
+  = LambdaFunctionSucceededEventDetails { output :: Maybe (Data) }
 ```
 
 <p>Contains details about a lambda function which successfully terminated during an execution.</p>
@@ -1873,7 +1873,7 @@ Constructs LambdaFunctionSucceededEventDetails from required parameters
 #### `newLambdaFunctionSucceededEventDetails'`
 
 ``` purescript
-newLambdaFunctionSucceededEventDetails' :: ({ output :: NullOrUndefined (Data) } -> { output :: NullOrUndefined (Data) }) -> LambdaFunctionSucceededEventDetails
+newLambdaFunctionSucceededEventDetails' :: ({ output :: Maybe (Data) } -> { output :: Maybe (Data) }) -> LambdaFunctionSucceededEventDetails
 ```
 
 Constructs LambdaFunctionSucceededEventDetails's fields from required parameters
@@ -1882,7 +1882,7 @@ Constructs LambdaFunctionSucceededEventDetails's fields from required parameters
 
 ``` purescript
 newtype LambdaFunctionTimedOutEventDetails
-  = LambdaFunctionTimedOutEventDetails { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }
+  = LambdaFunctionTimedOutEventDetails { error :: Maybe (Error), cause :: Maybe (Cause) }
 ```
 
 <p>Contains details about a lambda function timeout which occurred during an execution.</p>
@@ -1907,7 +1907,7 @@ Constructs LambdaFunctionTimedOutEventDetails from required parameters
 #### `newLambdaFunctionTimedOutEventDetails'`
 
 ``` purescript
-newLambdaFunctionTimedOutEventDetails' :: ({ error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) } -> { error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }) -> LambdaFunctionTimedOutEventDetails
+newLambdaFunctionTimedOutEventDetails' :: ({ error :: Maybe (Error), cause :: Maybe (Cause) } -> { error :: Maybe (Error), cause :: Maybe (Cause) }) -> LambdaFunctionTimedOutEventDetails
 ```
 
 Constructs LambdaFunctionTimedOutEventDetails's fields from required parameters
@@ -1916,7 +1916,7 @@ Constructs LambdaFunctionTimedOutEventDetails's fields from required parameters
 
 ``` purescript
 newtype ListActivitiesInput
-  = ListActivitiesInput { maxResults :: NullOrUndefined (PageSize), nextToken :: NullOrUndefined (PageToken) }
+  = ListActivitiesInput { maxResults :: Maybe (PageSize), nextToken :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -1939,7 +1939,7 @@ Constructs ListActivitiesInput from required parameters
 #### `newListActivitiesInput'`
 
 ``` purescript
-newListActivitiesInput' :: ({ maxResults :: NullOrUndefined (PageSize), nextToken :: NullOrUndefined (PageToken) } -> { maxResults :: NullOrUndefined (PageSize), nextToken :: NullOrUndefined (PageToken) }) -> ListActivitiesInput
+newListActivitiesInput' :: ({ maxResults :: Maybe (PageSize), nextToken :: Maybe (PageToken) } -> { maxResults :: Maybe (PageSize), nextToken :: Maybe (PageToken) }) -> ListActivitiesInput
 ```
 
 Constructs ListActivitiesInput's fields from required parameters
@@ -1948,7 +1948,7 @@ Constructs ListActivitiesInput's fields from required parameters
 
 ``` purescript
 newtype ListActivitiesOutput
-  = ListActivitiesOutput { activities :: ActivityList, nextToken :: NullOrUndefined (PageToken) }
+  = ListActivitiesOutput { activities :: ActivityList, nextToken :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -1971,7 +1971,7 @@ Constructs ListActivitiesOutput from required parameters
 #### `newListActivitiesOutput'`
 
 ``` purescript
-newListActivitiesOutput' :: ActivityList -> ({ activities :: ActivityList, nextToken :: NullOrUndefined (PageToken) } -> { activities :: ActivityList, nextToken :: NullOrUndefined (PageToken) }) -> ListActivitiesOutput
+newListActivitiesOutput' :: ActivityList -> ({ activities :: ActivityList, nextToken :: Maybe (PageToken) } -> { activities :: ActivityList, nextToken :: Maybe (PageToken) }) -> ListActivitiesOutput
 ```
 
 Constructs ListActivitiesOutput's fields from required parameters
@@ -1980,7 +1980,7 @@ Constructs ListActivitiesOutput's fields from required parameters
 
 ``` purescript
 newtype ListExecutionsInput
-  = ListExecutionsInput { stateMachineArn :: Arn, statusFilter :: NullOrUndefined (ExecutionStatus), maxResults :: NullOrUndefined (PageSize), nextToken :: NullOrUndefined (PageToken) }
+  = ListExecutionsInput { stateMachineArn :: Arn, statusFilter :: Maybe (ExecutionStatus), maxResults :: Maybe (PageSize), nextToken :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -2003,7 +2003,7 @@ Constructs ListExecutionsInput from required parameters
 #### `newListExecutionsInput'`
 
 ``` purescript
-newListExecutionsInput' :: Arn -> ({ stateMachineArn :: Arn, statusFilter :: NullOrUndefined (ExecutionStatus), maxResults :: NullOrUndefined (PageSize), nextToken :: NullOrUndefined (PageToken) } -> { stateMachineArn :: Arn, statusFilter :: NullOrUndefined (ExecutionStatus), maxResults :: NullOrUndefined (PageSize), nextToken :: NullOrUndefined (PageToken) }) -> ListExecutionsInput
+newListExecutionsInput' :: Arn -> ({ stateMachineArn :: Arn, statusFilter :: Maybe (ExecutionStatus), maxResults :: Maybe (PageSize), nextToken :: Maybe (PageToken) } -> { stateMachineArn :: Arn, statusFilter :: Maybe (ExecutionStatus), maxResults :: Maybe (PageSize), nextToken :: Maybe (PageToken) }) -> ListExecutionsInput
 ```
 
 Constructs ListExecutionsInput's fields from required parameters
@@ -2012,7 +2012,7 @@ Constructs ListExecutionsInput's fields from required parameters
 
 ``` purescript
 newtype ListExecutionsOutput
-  = ListExecutionsOutput { executions :: ExecutionList, nextToken :: NullOrUndefined (PageToken) }
+  = ListExecutionsOutput { executions :: ExecutionList, nextToken :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -2035,7 +2035,7 @@ Constructs ListExecutionsOutput from required parameters
 #### `newListExecutionsOutput'`
 
 ``` purescript
-newListExecutionsOutput' :: ExecutionList -> ({ executions :: ExecutionList, nextToken :: NullOrUndefined (PageToken) } -> { executions :: ExecutionList, nextToken :: NullOrUndefined (PageToken) }) -> ListExecutionsOutput
+newListExecutionsOutput' :: ExecutionList -> ({ executions :: ExecutionList, nextToken :: Maybe (PageToken) } -> { executions :: ExecutionList, nextToken :: Maybe (PageToken) }) -> ListExecutionsOutput
 ```
 
 Constructs ListExecutionsOutput's fields from required parameters
@@ -2044,7 +2044,7 @@ Constructs ListExecutionsOutput's fields from required parameters
 
 ``` purescript
 newtype ListStateMachinesInput
-  = ListStateMachinesInput { maxResults :: NullOrUndefined (PageSize), nextToken :: NullOrUndefined (PageToken) }
+  = ListStateMachinesInput { maxResults :: Maybe (PageSize), nextToken :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -2067,7 +2067,7 @@ Constructs ListStateMachinesInput from required parameters
 #### `newListStateMachinesInput'`
 
 ``` purescript
-newListStateMachinesInput' :: ({ maxResults :: NullOrUndefined (PageSize), nextToken :: NullOrUndefined (PageToken) } -> { maxResults :: NullOrUndefined (PageSize), nextToken :: NullOrUndefined (PageToken) }) -> ListStateMachinesInput
+newListStateMachinesInput' :: ({ maxResults :: Maybe (PageSize), nextToken :: Maybe (PageToken) } -> { maxResults :: Maybe (PageSize), nextToken :: Maybe (PageToken) }) -> ListStateMachinesInput
 ```
 
 Constructs ListStateMachinesInput's fields from required parameters
@@ -2076,7 +2076,7 @@ Constructs ListStateMachinesInput's fields from required parameters
 
 ``` purescript
 newtype ListStateMachinesOutput
-  = ListStateMachinesOutput { stateMachines :: StateMachineList, nextToken :: NullOrUndefined (PageToken) }
+  = ListStateMachinesOutput { stateMachines :: StateMachineList, nextToken :: Maybe (PageToken) }
 ```
 
 ##### Instances
@@ -2099,7 +2099,7 @@ Constructs ListStateMachinesOutput from required parameters
 #### `newListStateMachinesOutput'`
 
 ``` purescript
-newListStateMachinesOutput' :: StateMachineList -> ({ stateMachines :: StateMachineList, nextToken :: NullOrUndefined (PageToken) } -> { stateMachines :: StateMachineList, nextToken :: NullOrUndefined (PageToken) }) -> ListStateMachinesOutput
+newListStateMachinesOutput' :: StateMachineList -> ({ stateMachines :: StateMachineList, nextToken :: Maybe (PageToken) } -> { stateMachines :: StateMachineList, nextToken :: Maybe (PageToken) }) -> ListStateMachinesOutput
 ```
 
 Constructs ListStateMachinesOutput's fields from required parameters
@@ -2108,7 +2108,7 @@ Constructs ListStateMachinesOutput's fields from required parameters
 
 ``` purescript
 newtype MissingRequiredParameter
-  = MissingRequiredParameter { message :: NullOrUndefined (ErrorMessage) }
+  = MissingRequiredParameter { message :: Maybe (ErrorMessage) }
 ```
 
 <p>Request is missing a required parameter. This error occurs if both <code>definition</code> and <code>roleArn</code> are not specified.</p>
@@ -2133,7 +2133,7 @@ Constructs MissingRequiredParameter from required parameters
 #### `newMissingRequiredParameter'`
 
 ``` purescript
-newMissingRequiredParameter' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> MissingRequiredParameter
+newMissingRequiredParameter' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> MissingRequiredParameter
 ```
 
 Constructs MissingRequiredParameter's fields from required parameters
@@ -2206,7 +2206,7 @@ Encode ReverseOrder
 
 ``` purescript
 newtype SendTaskFailureInput
-  = SendTaskFailureInput { taskToken :: TaskToken, error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }
+  = SendTaskFailureInput { taskToken :: TaskToken, error :: Maybe (Error), cause :: Maybe (Cause) }
 ```
 
 ##### Instances
@@ -2229,7 +2229,7 @@ Constructs SendTaskFailureInput from required parameters
 #### `newSendTaskFailureInput'`
 
 ``` purescript
-newSendTaskFailureInput' :: TaskToken -> ({ taskToken :: TaskToken, error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) } -> { taskToken :: TaskToken, error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }) -> SendTaskFailureInput
+newSendTaskFailureInput' :: TaskToken -> ({ taskToken :: TaskToken, error :: Maybe (Error), cause :: Maybe (Cause) } -> { taskToken :: TaskToken, error :: Maybe (Error), cause :: Maybe (Cause) }) -> SendTaskFailureInput
 ```
 
 Constructs SendTaskFailureInput's fields from required parameters
@@ -2350,7 +2350,7 @@ Encode SendTaskSuccessOutput
 
 ``` purescript
 newtype StartExecutionInput
-  = StartExecutionInput { stateMachineArn :: Arn, name :: NullOrUndefined (Name), input :: NullOrUndefined (Data) }
+  = StartExecutionInput { stateMachineArn :: Arn, name :: Maybe (Name), input :: Maybe (Data) }
 ```
 
 ##### Instances
@@ -2373,7 +2373,7 @@ Constructs StartExecutionInput from required parameters
 #### `newStartExecutionInput'`
 
 ``` purescript
-newStartExecutionInput' :: Arn -> ({ stateMachineArn :: Arn, name :: NullOrUndefined (Name), input :: NullOrUndefined (Data) } -> { stateMachineArn :: Arn, name :: NullOrUndefined (Name), input :: NullOrUndefined (Data) }) -> StartExecutionInput
+newStartExecutionInput' :: Arn -> ({ stateMachineArn :: Arn, name :: Maybe (Name), input :: Maybe (Data) } -> { stateMachineArn :: Arn, name :: Maybe (Name), input :: Maybe (Data) }) -> StartExecutionInput
 ```
 
 Constructs StartExecutionInput's fields from required parameters
@@ -2414,7 +2414,7 @@ Constructs StartExecutionOutput's fields from required parameters
 
 ``` purescript
 newtype StateEnteredEventDetails
-  = StateEnteredEventDetails { name :: Name, input :: NullOrUndefined (Data) }
+  = StateEnteredEventDetails { name :: Name, input :: Maybe (Data) }
 ```
 
 <p>Contains details about a state entered during an execution.</p>
@@ -2439,7 +2439,7 @@ Constructs StateEnteredEventDetails from required parameters
 #### `newStateEnteredEventDetails'`
 
 ``` purescript
-newStateEnteredEventDetails' :: Name -> ({ name :: Name, input :: NullOrUndefined (Data) } -> { name :: Name, input :: NullOrUndefined (Data) }) -> StateEnteredEventDetails
+newStateEnteredEventDetails' :: Name -> ({ name :: Name, input :: Maybe (Data) } -> { name :: Name, input :: Maybe (Data) }) -> StateEnteredEventDetails
 ```
 
 Constructs StateEnteredEventDetails's fields from required parameters
@@ -2448,7 +2448,7 @@ Constructs StateEnteredEventDetails's fields from required parameters
 
 ``` purescript
 newtype StateExitedEventDetails
-  = StateExitedEventDetails { name :: Name, output :: NullOrUndefined (Data) }
+  = StateExitedEventDetails { name :: Name, output :: Maybe (Data) }
 ```
 
 <p>Contains details about an exit from a state during an execution.</p>
@@ -2473,7 +2473,7 @@ Constructs StateExitedEventDetails from required parameters
 #### `newStateExitedEventDetails'`
 
 ``` purescript
-newStateExitedEventDetails' :: Name -> ({ name :: Name, output :: NullOrUndefined (Data) } -> { name :: Name, output :: NullOrUndefined (Data) }) -> StateExitedEventDetails
+newStateExitedEventDetails' :: Name -> ({ name :: Name, output :: Maybe (Data) } -> { name :: Name, output :: Maybe (Data) }) -> StateExitedEventDetails
 ```
 
 Constructs StateExitedEventDetails's fields from required parameters
@@ -2482,7 +2482,7 @@ Constructs StateExitedEventDetails's fields from required parameters
 
 ``` purescript
 newtype StateMachineAlreadyExists
-  = StateMachineAlreadyExists { message :: NullOrUndefined (ErrorMessage) }
+  = StateMachineAlreadyExists { message :: Maybe (ErrorMessage) }
 ```
 
 <p>A state machine with the same name but a different definition or role ARN already exists.</p>
@@ -2507,7 +2507,7 @@ Constructs StateMachineAlreadyExists from required parameters
 #### `newStateMachineAlreadyExists'`
 
 ``` purescript
-newStateMachineAlreadyExists' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> StateMachineAlreadyExists
+newStateMachineAlreadyExists' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> StateMachineAlreadyExists
 ```
 
 Constructs StateMachineAlreadyExists's fields from required parameters
@@ -2516,7 +2516,7 @@ Constructs StateMachineAlreadyExists's fields from required parameters
 
 ``` purescript
 newtype StateMachineDeleting
-  = StateMachineDeleting { message :: NullOrUndefined (ErrorMessage) }
+  = StateMachineDeleting { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The specified state machine is being deleted.</p>
@@ -2541,7 +2541,7 @@ Constructs StateMachineDeleting from required parameters
 #### `newStateMachineDeleting'`
 
 ``` purescript
-newStateMachineDeleting' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> StateMachineDeleting
+newStateMachineDeleting' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> StateMachineDeleting
 ```
 
 Constructs StateMachineDeleting's fields from required parameters
@@ -2550,7 +2550,7 @@ Constructs StateMachineDeleting's fields from required parameters
 
 ``` purescript
 newtype StateMachineDoesNotExist
-  = StateMachineDoesNotExist { message :: NullOrUndefined (ErrorMessage) }
+  = StateMachineDoesNotExist { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The specified state machine does not exist.</p>
@@ -2575,7 +2575,7 @@ Constructs StateMachineDoesNotExist from required parameters
 #### `newStateMachineDoesNotExist'`
 
 ``` purescript
-newStateMachineDoesNotExist' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> StateMachineDoesNotExist
+newStateMachineDoesNotExist' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> StateMachineDoesNotExist
 ```
 
 Constructs StateMachineDoesNotExist's fields from required parameters
@@ -2584,7 +2584,7 @@ Constructs StateMachineDoesNotExist's fields from required parameters
 
 ``` purescript
 newtype StateMachineLimitExceeded
-  = StateMachineLimitExceeded { message :: NullOrUndefined (ErrorMessage) }
+  = StateMachineLimitExceeded { message :: Maybe (ErrorMessage) }
 ```
 
 <p>The maximum number of state machines has been reached. Existing state machines must be deleted before a new state machine can be created.</p>
@@ -2609,7 +2609,7 @@ Constructs StateMachineLimitExceeded from required parameters
 #### `newStateMachineLimitExceeded'`
 
 ``` purescript
-newStateMachineLimitExceeded' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> StateMachineLimitExceeded
+newStateMachineLimitExceeded' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> StateMachineLimitExceeded
 ```
 
 Constructs StateMachineLimitExceeded's fields from required parameters
@@ -2684,7 +2684,7 @@ Encode StateMachineStatus
 
 ``` purescript
 newtype StopExecutionInput
-  = StopExecutionInput { executionArn :: Arn, error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }
+  = StopExecutionInput { executionArn :: Arn, error :: Maybe (Error), cause :: Maybe (Cause) }
 ```
 
 ##### Instances
@@ -2707,7 +2707,7 @@ Constructs StopExecutionInput from required parameters
 #### `newStopExecutionInput'`
 
 ``` purescript
-newStopExecutionInput' :: Arn -> ({ executionArn :: Arn, error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) } -> { executionArn :: Arn, error :: NullOrUndefined (Error), cause :: NullOrUndefined (Cause) }) -> StopExecutionInput
+newStopExecutionInput' :: Arn -> ({ executionArn :: Arn, error :: Maybe (Error), cause :: Maybe (Cause) } -> { executionArn :: Arn, error :: Maybe (Error), cause :: Maybe (Cause) }) -> StopExecutionInput
 ```
 
 Constructs StopExecutionInput's fields from required parameters
@@ -2748,7 +2748,7 @@ Constructs StopExecutionOutput's fields from required parameters
 
 ``` purescript
 newtype TaskDoesNotExist
-  = TaskDoesNotExist { message :: NullOrUndefined (ErrorMessage) }
+  = TaskDoesNotExist { message :: Maybe (ErrorMessage) }
 ```
 
 ##### Instances
@@ -2771,7 +2771,7 @@ Constructs TaskDoesNotExist from required parameters
 #### `newTaskDoesNotExist'`
 
 ``` purescript
-newTaskDoesNotExist' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> TaskDoesNotExist
+newTaskDoesNotExist' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> TaskDoesNotExist
 ```
 
 Constructs TaskDoesNotExist's fields from required parameters
@@ -2780,7 +2780,7 @@ Constructs TaskDoesNotExist's fields from required parameters
 
 ``` purescript
 newtype TaskTimedOut
-  = TaskTimedOut { message :: NullOrUndefined (ErrorMessage) }
+  = TaskTimedOut { message :: Maybe (ErrorMessage) }
 ```
 
 ##### Instances
@@ -2803,7 +2803,7 @@ Constructs TaskTimedOut from required parameters
 #### `newTaskTimedOut'`
 
 ``` purescript
-newTaskTimedOut' :: ({ message :: NullOrUndefined (ErrorMessage) } -> { message :: NullOrUndefined (ErrorMessage) }) -> TaskTimedOut
+newTaskTimedOut' :: ({ message :: Maybe (ErrorMessage) } -> { message :: Maybe (ErrorMessage) }) -> TaskTimedOut
 ```
 
 Constructs TaskTimedOut's fields from required parameters
@@ -2844,7 +2844,7 @@ Encode TimeoutInSeconds
 
 ``` purescript
 newtype UpdateStateMachineInput
-  = UpdateStateMachineInput { stateMachineArn :: Arn, definition :: NullOrUndefined (Definition), roleArn :: NullOrUndefined (Arn) }
+  = UpdateStateMachineInput { stateMachineArn :: Arn, definition :: Maybe (Definition), roleArn :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -2867,7 +2867,7 @@ Constructs UpdateStateMachineInput from required parameters
 #### `newUpdateStateMachineInput'`
 
 ``` purescript
-newUpdateStateMachineInput' :: Arn -> ({ stateMachineArn :: Arn, definition :: NullOrUndefined (Definition), roleArn :: NullOrUndefined (Arn) } -> { stateMachineArn :: Arn, definition :: NullOrUndefined (Definition), roleArn :: NullOrUndefined (Arn) }) -> UpdateStateMachineInput
+newUpdateStateMachineInput' :: Arn -> ({ stateMachineArn :: Arn, definition :: Maybe (Definition), roleArn :: Maybe (Arn) } -> { stateMachineArn :: Arn, definition :: Maybe (Definition), roleArn :: Maybe (Arn) }) -> UpdateStateMachineInput
 ```
 
 Constructs UpdateStateMachineInput's fields from required parameters
